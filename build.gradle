@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+    }
+    dependencies {
+        classpath 'com.esri.arcgisruntime:gradle-arcgis-java-plugin:1.0.0'
+    }
+}
+
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.5'
+}
+
+apply plugin: 'com.esri.arcgisruntime.java'
+
+arcgis.version = '100.4.0'
+
+javafx {
+    version = "11.0.1"
+    modules = [ 'javafx.controls', 'javafx.web', 'javafx.fxml' ]
+}
+
+run {
+    mainClassName = 'com.mycompany.app.App'
+}
+
+wrapper {
+    gradleVersion = '5.0'
+}
