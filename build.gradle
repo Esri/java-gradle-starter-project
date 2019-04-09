@@ -16,11 +16,11 @@ plugins {
 
 apply plugin: 'com.esri.arcgisruntime.java'
 
-arcgis.version = '100.4.0'
+arcgis.version = '100.5.0'
 
 javafx {
     version = "11.0.1"
-    modules = [ 'javafx.controls', 'javafx.web', 'javafx.fxml' ]
+    modules = [ 'javafx.controls', 'javafx.web', 'javafx.fxml', 'javafx.media' ]
 }
 
 run {
