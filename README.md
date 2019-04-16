@@ -1,11 +1,14 @@
 # arcgis-java-gradle-starter-project
-Starter project for the ArcGIS Runtime SDK for Java with Gradle. 
+
+Here is a starter project for the ArcGIS Runtime SDK for Java with Gradle. 
 
 The project includes the Gradle wrapper, so there is no need to install Gradle to run the app.
 
 The app launches a window displaying a map.
 
 ![screenshot](screenshot.png)
+
+## Instructions
 
 ### IntelliJ IDEA
 
@@ -31,6 +34,24 @@ The app launches a window displaying a map.
 1. `cd` into the project's root directory.
 2. Run `./gradlew clean build` on Linux/Mac or `gradlew.bat clean build` on Windows once to make sure the dependencies are fetched.
 3. Run `./gradlew run` on Linux/Mac or `gradlew.bat run` on Windows to run the app.
+
+## Requirements
+
+See the Runtime SDK's [system requirements](https://developers.arcgis.com/java/latest/guide/system-requirements-for-quartz.htm).
+
+## Resources
+
+* [ArcGIS Runtime SDK for Java](https://developers.arcgis.com/java/)  
+* [ArcGIS Blog](https://blogs.esri.com/esri/arcgis/)  
+* [Esri Twitter](https://twitter.com/esri)  
+
+## Issues
+
+Find a bug or want to request a new feature?  Please let us know by submitting an issue.
+
+## Contributing
+
+Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
 ## Licensing
 
