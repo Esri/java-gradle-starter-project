@@ -1,6 +1,6 @@
 # java-gradle-starter-project
 
-Here is a starter project for the ArcGIS Runtime SDK for Java with Gradle. 
+Here is a starter project for the ArcGIS Runtime SDK for Java with Gradle.
 
 The project includes the Gradle wrapper, so there is no need to install Gradle to run the app.
 
@@ -32,8 +32,9 @@ The app launches a window displaying a map.
 ### Command Line
 
 1. `cd` into the project's root directory.
-2. Run `./gradlew clean build` on Linux/Mac or `gradlew.bat clean build` on Windows once to make sure the dependencies are fetched.
-3. Run `./gradlew run` on Linux/Mac or `gradlew.bat run` on Windows to run the app.
+2. Run `gradle wrapper` to build a fresh version of `./gradle/wrapper/gradle-wrapper.jar`.
+3. Run `./gradlew clean build` on Linux/Mac or `gradlew.bat clean build` on Windows once to make sure the dependencies are fetched.
+4. Run `./gradlew run` on Linux/Mac or `gradlew.bat run` on Windows to run the app.
 
 ## Requirements
 
