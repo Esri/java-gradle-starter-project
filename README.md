@@ -16,8 +16,8 @@ The app launches a window displaying a map.
 2. Choose the java-gradle-starter-project directory and click _OK_.
 3. Select _File > Project Structure..._ and ensure that the Project SDK and language level are set to use Java 11.
 4. Open the Gradle view with _View > Tool Windows > Gradle_.
-5. Refresh the Gradle project by clicking the _Refresh all Gradle projects_ button in the Gradle view toolbar.
-6. In the Gradle view, double-click `run` under _Tasks > application_ to run the app. This task will cause the native libraries to be copied to $USER_HOME/.arcgis before the sample is run.
+5. In the Gradle view, double-click `copyNatives` under _Tasks > build_. This will unpack the native library dependencies to $USER_HOME/.arcgis.
+6. In the Gradle view, double-click `run` under _Tasks > application_ to run the app.
 
 ### Eclipse
 
@@ -25,11 +25,11 @@ The app launches a window displaying a map.
 2. In the import wizard, choose _Gradle > Existing Gradle Project_, then click _Next_.
 3. Select the java-gradle-starter-project directory as the project root directory.
 4. Click _Finish_ to complete the import.
-5. Select  _Project > Properties_ . In _Java Build Path_--ensure that in Libraries tab, _Modulepath_ is set to JRE System Library (JavaSE-11). In _Java Compiler_--ensure that the _Use compliance from execution environment 'JavaSE-11' on the 'Java Build Path'_ checkbox is selected.
-
+5. Select _Project > Properties_ . In _Java Build Path_, ensure that under the Libraries tab, _Modulepath_ is set to JRE System Library (JavaSE-11). In _Java Compiler_, ensure that the _Use compliance from execution environment 'JavaSE-11' on the 'Java Build Path'_ checkbox is selected.
 6. Right-click the project in the Project Explorer or Package Explorer and choose _Gradle > Refresh Gradle project_.
 7. Open the Gradle Tasks view with _Window > Show View > Other... > Gradle > Gradle Tasks_.
-8. In the Gradle Tasks view, double-click `run` under _java-gradle-starter-project > application_ to run the app. This task will cause the native libraries to be copied to $USER_HOME/.arcgis before the sample is run.
+8. In the Gradle Tasks view, double-click `copyNatives` under _java-gradle-starter-project > build_. This will unpack the native library dependencies to $USER_HOME/.arcgis.
+8. In the Gradle Tasks view, double-click `run` under _java-gradle-starter-project > application_ to run the app.
 
 ### Command Line
 
