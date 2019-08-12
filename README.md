@@ -29,7 +29,7 @@ The app launches a window displaying a map.
 6. Right-click the project in the Project Explorer or Package Explorer and choose _Gradle > Refresh Gradle project_.
 7. Open the Gradle Tasks view with _Window > Show View > Other... > Gradle > Gradle Tasks_.
 8. In the Gradle Tasks view, double-click `copyNatives` under _java-gradle-starter-project > build_. This will unpack the native library dependencies to $USER_HOME/.arcgis.
-8. In the Gradle Tasks view, double-click `run` under _java-gradle-starter-project > application_ to run the app.
+9. In the Gradle Tasks view, double-click `run` under _java-gradle-starter-project > application_ to run the app.
 
 ### Command Line
 
