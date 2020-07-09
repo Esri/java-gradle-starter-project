@@ -41,8 +41,13 @@ dependencies {
 }
 
 javafx {
-    version = "11.0.1"
-    modules = [ 'javafx.controls' ]
+    version = "11.0.2"
+    modules = [ 'javafx.controls',
+                'javafx.base',
+                'javafx.graphics',
+                'javafx.fxml',
+                'javafx.web',
+                'javafx.media']
 }
 
 task copyNatives(type: Copy) {
