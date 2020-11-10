@@ -35,7 +35,7 @@ configurations {
 }
 
 dependencies {
-    compile "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
+    implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
 }
@@ -57,8 +57,4 @@ task copyNatives(type: Copy) {
 run {
     dependsOn copyNatives
     mainClassName = 'com.mycompany.app.App'
-}
-
-wrapper {
-    gradleVersion = '5.0'
 }
