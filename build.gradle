@@ -58,7 +58,3 @@ run {
     dependsOn copyNatives
     mainClassName = 'com.mycompany.app.App'
 }
-
-wrapper {
-    gradleVersion = '6.5.1'
-}
