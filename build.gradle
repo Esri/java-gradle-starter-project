@@ -20,7 +20,7 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.9.0'
+    arcgisVersion = '100.10.0'
 }
 
 repositories {
