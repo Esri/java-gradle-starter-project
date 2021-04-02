@@ -17,6 +17,7 @@
 package com.mycompany.app;
 
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment;
+import com.esri.arcgisruntime.mapping.Basemap;
 import com.esri.arcgisruntime.mapping.BasemapStyle;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.view.MapView;
@@ -60,7 +61,8 @@ public class App extends Application {
         stackPane.getChildren().add(mapView);
 
         // create an ArcGISMap with an imagery basemap
-        ArcGISMap map = new ArcGISMap(BasemapStyle.ARCGIS_IMAGERY);
+        //ArcGISMap map = new ArcGISMap(BasemapStyle.ARCGIS_IMAGERY);
+        ArcGISMap map = new ArcGISMap(Basemap.createStreets());
 
         // display the map by setting the map on the map view
         mapView.setMap(map);
