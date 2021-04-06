@@ -20,16 +20,13 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.11.0-3102'
+    arcgisVersion = '100.11.0'
 }
 
 repositories {
     jcenter()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
-    }
-    maven {
-        url 'http://olympus.esri.com/artifactory/arcgisruntime-repo'
     }
 }
 

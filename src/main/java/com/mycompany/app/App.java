@@ -61,8 +61,7 @@ public class App extends Application {
         stackPane.getChildren().add(mapView);
 
         // create an ArcGISMap with an imagery basemap
-        //ArcGISMap map = new ArcGISMap(BasemapStyle.ARCGIS_IMAGERY);
-        ArcGISMap map = new ArcGISMap(Basemap.createStreets());
+        ArcGISMap map = new ArcGISMap(BasemapStyle.ARCGIS_IMAGERY);
 
         // display the map by setting the map on the map view
         mapView.setMap(map);
