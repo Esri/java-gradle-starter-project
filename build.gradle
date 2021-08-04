@@ -20,7 +20,7 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.11.2'
+    arcgisVersion = '100.12.0'
 }
 
 repositories {
@@ -38,6 +38,7 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
+    implementation "org.slf4j:slf4j-nop:1.7.3"
 }
 
 javafx {
@@ -57,4 +58,19 @@ task copyNatives(type: Copy) {
 run {
     dependsOn copyNatives
     mainClassName = 'com.mycompany.app.App'
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes("Main-Class": "$mainClassName")
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+
+    // exclude signing files that come from dependencies
+    exclude "META-INF/*.SF"
+    exclude "META-INF/*.DSA"
+    exclude "META-INF/*.RSA"
 }
