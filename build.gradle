@@ -24,7 +24,7 @@ ext {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
     }
@@ -58,19 +58,4 @@ task copyNatives(type: Copy) {
 run {
     dependsOn copyNatives
     mainClassName = 'com.mycompany.app.App'
-}
-
-jar {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    manifest {
-        attributes("Main-Class": "$mainClassName")
-    }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-
-    // exclude signing files that come from dependencies
-    exclude "META-INF/*.SF"
-    exclude "META-INF/*.DSA"
-    exclude "META-INF/*.RSA"
 }
