@@ -28,6 +28,9 @@ repositories {
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
     }
+    maven {
+        url 'https://olympus.esri.com/artifactory/arcgisruntime-repo'
+    }
 }
 
 configurations {
@@ -38,7 +41,7 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
-    implementation "org.slf4j:slf4j-nop:1.7.3"
+    runtimeOnly "org.slf4j:slf4j-nop:1.7.32"
 }
 
 javafx {
