@@ -20,11 +20,11 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.11.2'
+    arcgisVersion = '100.12.0'
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
     }
@@ -38,6 +38,7 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
+    runtimeOnly "org.slf4j:slf4j-nop:1.7.32"
 }
 
 javafx {
