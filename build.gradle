@@ -16,7 +16,7 @@
 
 plugins {
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.12'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
 ext {
@@ -27,6 +27,9 @@ repositories {
     mavenCentral()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
+    }
+    maven {
+        url 'https://olympus.esri.com/artifactory/arcgisruntime-repo'
     }
 }
 
