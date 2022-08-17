@@ -16,11 +16,11 @@
 
 plugins {
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.12'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
 ext {
-    arcgisVersion = '100.14.0'
+    arcgisVersion = '100.15.0'
 }
 
 repositories {
