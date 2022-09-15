@@ -23,6 +23,11 @@ ext {
     arcgisVersion = '200.0.0-3634'
 }
 
+application {
+    mainModule = "java.gradle.starter.project.main"
+    mainClass = "com.mycompany.app.App"
+}
+
 repositories {
     mavenCentral()
     maven {
@@ -46,7 +51,7 @@ dependencies {
 
 javafx {
     version = "17.0.2"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.controls','javafx.media','javafx.fxml', 'javafx.web']
 }
 
 task copyNatives(type: Copy) {
