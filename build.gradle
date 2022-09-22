@@ -20,13 +20,21 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.15.0'
+    arcgisVersion = '200.0.0-3634'
+}
+
+application {
+    mainModule = "java.gradle.starter.project.main"
+    mainClass = "com.mycompany.app.App"
 }
 
 repositories {
     mavenCentral()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
+    }
+    maven {
+        url 'https://olympus.esri.com/artifactory/arcgisruntime-repo'
     }
 }
 
@@ -43,7 +51,7 @@ dependencies {
 
 javafx {
     version = "17.0.2"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.base', 'javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.web', 'javafx.media' ]
 }
 
 task copyNatives(type: Copy) {
