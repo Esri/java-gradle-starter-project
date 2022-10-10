@@ -20,7 +20,7 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '200.0.0-3634'
+    arcgisVersion = '200.0.0-beta+1'
 }
 
 application {
