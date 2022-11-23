@@ -20,13 +20,16 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.15.0'
+    arcgisVersion = '200.0.0-3702'
 }
 
 repositories {
     mavenCentral()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
+    }
+    maven {
+        url 'https://olympus.esri.com/artifactory/arcgisruntime-repo'
     }
 }
 
@@ -38,12 +41,17 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
-    runtimeOnly "org.slf4j:slf4j-nop:1.7.32"
+    runtimeOnly 'org.slf4j:slf4j-nop:2.0.4'
 }
 
 javafx {
     version = "17.0.2"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.web', 'javafx.media' ]
+}
+
+application {
+    mainModule = "com.mycompany.app"
+    mainClass = "com.mycompany.app.App"
 }
 
 task copyNatives(type: Copy) {
