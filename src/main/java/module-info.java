@@ -15,11 +15,10 @@
  */
 
 module com.mycompany.app {
-  // require ArcGIS Runtime module
+  // modules required by the app
   requires com.esri.arcgisruntime;
-
-  // require JavaFX modules that the application uses
   requires javafx.graphics;
+  requires org.slf4j.nop;
 
   exports com.mycompany.app;
 }

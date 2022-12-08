@@ -20,7 +20,7 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '200.0.0-3702'
+    arcgisVersion = '200.0.0'
 }
 
 repositories {
@@ -41,7 +41,7 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
-    runtimeOnly "org.slf4j:slf4j-nop:1.7.32"
+    implementation "org.slf4j:slf4j-nop:2.0.5"
 }
 
 javafx {
