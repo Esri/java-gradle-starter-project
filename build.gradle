@@ -25,6 +25,7 @@ ext {
 
 repositories {
     mavenCentral()
+    mavenLocal()
     maven {
         url 'https://esri.jfrog.io/artifactory/arcgis'
     }
@@ -63,5 +64,4 @@ task copyNatives(type: Copy) {
 
 run {
     dependsOn copyNatives
-    mainClassName = 'com.mycompany.app.App'
 }
