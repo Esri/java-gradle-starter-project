@@ -20,7 +20,7 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '100.15.0'
+    arcgisVersion = '200.0.0'
 }
 
 repositories {
@@ -38,12 +38,18 @@ dependencies {
     implementation "com.esri.arcgisruntime:arcgis-java:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
-    runtimeOnly "org.slf4j:slf4j-nop:1.7.32"
+    // handle SLF4J http://www.slf4j.org/codes.html#StaticLoggerBinder using a no-operation logger
+    implementation "org.slf4j:slf4j-nop:2.0.5"
 }
 
 javafx {
     version = "17.0.2"
-    modules = [ 'javafx.controls' ]
+    modules = [ 'javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.web', 'javafx.media' ]
+}
+
+application {
+    mainModule = "com.mycompany.app"
+    mainClass = "com.mycompany.app.App"
 }
 
 task copyNatives(type: Copy) {
@@ -57,5 +63,4 @@ task copyNatives(type: Copy) {
 
 run {
     dependsOn copyNatives
-    mainClassName = 'com.mycompany.app.App'
 }
