@@ -36,7 +36,7 @@ The app launches a window displaying a map.
 1. `cd` into the project's root directory.
 2. Run `./gradlew clean build` on Linux/Mac or `gradlew.bat clean build` on Windows.
 3. Run `./gradlew copyNatives` on Linux/Mac or `gradlew.bat copyNatives` on Windows. This will unpack the native library dependencies to $USER_HOME.arcgis.
-3. Run `./gradlew run` on Linux/Mac or `gradlew.bat run` on Windows to run the app.
+4. Run `./gradlew run` on Linux/Mac or `gradlew.bat run` on Windows to run the app.
 
 ## Requirements
 
