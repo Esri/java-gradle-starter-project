@@ -4,7 +4,7 @@ Here is a starter project for the ArcGIS Maps SDK for Java with Gradle.
 
 This branch is dedicated to getting started with our early adopter release of the ARM Linux release.  The release is available as a Maven local install which can be requested by emailing   [ARM64LinuxNative@esri.com](ARM64LinuxNative@esri.com)
 
-When you have been provided access to the release, once the maven local install script ('install-local.sh') has been run , this branch will allow you to create a basic app which can run on an ARM Linux machine.
+When you have been provided access to the release, and the maven local install script `install-local.sh` has been run , this branch will allow you to create a basic app which can run on an ARM Linux machine.
 
 The project includes the Gradle wrapper, so there is no need to install Gradle to run the app.
 
