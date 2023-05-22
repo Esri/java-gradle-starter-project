@@ -20,14 +20,12 @@ plugins {
 }
 
 ext {
-    arcgisVersion = '200.1.0'
+    arcgisVersion = '200.1.0-3734'
 }
 
 repositories {
     mavenCentral()
-    maven {
-        url 'https://esri.jfrog.io/artifactory/arcgis'
-    }
+    mavenLocal()
 }
 
 configurations {
