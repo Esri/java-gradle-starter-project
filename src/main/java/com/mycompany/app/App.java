@@ -38,9 +38,9 @@ public class App extends Application {
     public void start(Stage stage) {
 
         // set the title and size of the stage and show it
-        stage.setTitle("SDA Project 3");
-        stage.setWidth(2048);
-        stage.setHeight(1024);
+        stage.setTitle("Esri Test Project for Git");
+        stage.setWidth(880);
+        stage.setHeight(660);
         stage.show();
 
         // create a JavaFX scene with a stack pane as the root node and add it to the scene
