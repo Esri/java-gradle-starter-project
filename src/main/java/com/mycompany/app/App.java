@@ -17,9 +17,11 @@
 package com.mycompany.app;
 
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment;
+import com.esri.arcgisruntime.data.Geodatabase;
 import com.esri.arcgisruntime.mapping.BasemapStyle;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.esri.arcgisruntime.tasks.geodatabase.GeodatabaseSyncTask;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -64,6 +66,17 @@ public class App extends Application {
 
         // display the map by setting the map on the map view
         mapView.setMap(map);
+
+        // you'll need to gdb and sync task
+        Geodatabase geodatabase = new Geodatabase("path to gdb");
+        GeodatabaseSyncTask syncTask = new GeodatabaseSyncTask("url of service goes here");
+
+        // request to unregister using the sync task passing in the gdb
+        var unregisterFuture = syncTask.unregisterGeodatabaseAsync(geodatabase);
+        // this is a listener to capture the request is complete
+        unregisterFuture.addDoneListener(()-> {
+            System.out.println("crude message to user to say its unregistered! ");
+        });
     }
 
     /**
