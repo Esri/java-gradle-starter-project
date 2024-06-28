@@ -27,7 +27,7 @@ idea {
 }
 
 ext {
-    arcgisVersion = '200.4.0'
+    arcgisVersion = '200.5.0'
 }
 
 repositories {
@@ -46,11 +46,11 @@ dependencies {
     natives "com.esri.arcgisruntime:arcgis-java-jnilibs:$arcgisVersion"
     natives "com.esri.arcgisruntime:arcgis-java-resources:$arcgisVersion"
     // handle SLF4J http://www.slf4j.org/codes.html#StaticLoggerBinder using a no-operation logger
-    implementation "org.slf4j:slf4j-nop:2.0.12"
+    implementation "org.slf4j:slf4j-nop:2.0.13"
 }
 
 javafx {
-    version = "21.0.2"
+    version = "21.0.3"
     modules = [ 'javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.web', 'javafx.media' ]
 }
 
