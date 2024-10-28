@@ -27,7 +27,7 @@ idea {
 }
 
 ext {
-    arcgisVersion = '200.5.0'
+    arcgisVersion = '200.6.0'
 }
 
 repositories {
@@ -50,7 +50,7 @@ dependencies {
 }
 
 javafx {
-    version = "21.0.3"
+    version = "21.0.5"
     modules = [ 'javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.web', 'javafx.media' ]
 }
 
